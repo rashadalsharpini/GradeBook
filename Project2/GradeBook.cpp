@@ -101,7 +101,9 @@ void GradeBook::DisplaySpecificStudentForcourse()
 	int place = searchCourse(search);
 	if (place >= 0) {
 		cout << "enter the name of the student you are looking for : ";
-		cin >> search;
+		//cin >> search;
+		cin.ignore();
+		getline(cin, search);
 		int plaz = cour[place].BinarySearchStudent(search);
 		if (plaz >= 0) {
 			cour[place].displaySpecificStudent(plaz);
@@ -120,7 +122,9 @@ void GradeBook::EDITstudent()
 	int place = searchCourse(search);
 	if (place >= 0) {
 		cout << " | enter the name of the student you want to edit : ";
-		cin >> search;
+		//cin >> search;
+		cin.ignore();
+		getline(cin, search);
 		int plaz = cour[place].BinarySearchStudent(search);
 		if (plaz >= 0) {
 			cour[place].editStudent(plaz);
@@ -139,7 +143,9 @@ void GradeBook::DELETEstudent()
 	int place = searchCourse(search);
 	if (place >= 0) {
 		cout << " | enter the name of the student you want to delete : ";
-		cin >> search;
+		//cin >> search;
+		cin.ignore();
+		getline(cin, search);
 		int plaz = cour[place].BinarySearchStudent(search);
 		if (plaz >= 0) {
 			cour[place].deleteStudent(plaz);

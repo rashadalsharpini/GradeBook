@@ -3,7 +3,11 @@
 void student::addNameId()
 {
 	cout << " | enter Name : ";
-	cin >> name;
+	//cin >> name;
+	cin.ignore();
+	//getline(cin, name);
+	getline(cin, name);
+	
 	cout << " | enter Id : ";
 	cin >> id;
 }
